@@ -1,11 +1,17 @@
 $(function () {
     // GET/Read
-    $('#addItem').on('click',function(){
+    $('#addItem').on('click',() => {
       $.ajax({
         url: '/tasks',
         contentType: 'application/json',
         success: function(response) {
-          console.log(response);
+          const value = $('#item').value;
+
+          if(value){
+            addItemTodo(value);
+            $('#item').value = "";
+
+          }
         }
 
       });
