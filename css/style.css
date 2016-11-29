@@ -253,3 +253,8 @@ ul.todo#completed:not(:empty):before {
   left: 50%;
   margin: 0 0 0 -75px;
 }
+
+button#get-button {
+  display: block;
+  margin: 0 auto;
+}
